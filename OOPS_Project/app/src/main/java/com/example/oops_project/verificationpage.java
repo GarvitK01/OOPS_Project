@@ -85,6 +85,7 @@ public class verificationpage extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(verificationpage.this, "Authentication successful!", Toast.LENGTH_SHORT).show();   // this shall take user to the next activity
+                    startActivity(new Intent(getApplicationContext(), MainActivity4.class));
 //                    Bundle extras = getIntent().getExtras();
 //                    if(extras != null){
 //                        String profession = extras.getString("profession");
@@ -127,7 +128,6 @@ public class verificationpage extends AppCompatActivity {
 
             @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
-                startActivity(new Intent(getApplicationContext(), MainActivity4.class));
             }
 
             @Override

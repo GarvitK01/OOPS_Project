@@ -22,6 +22,7 @@
             android:layout_marginTop="200dp"
             android:fontFamily="@font/exo_medium"
             android:text="profession"
+            android:textColor="#7F7F7F"
             android:textSize="18sp" />
 
         <TextView
@@ -32,6 +33,7 @@
             android:layout_marginTop="400dp"
             android:fontFamily="@font/exo_medium"
             android:text="phone"
+            android:textColor="#7F7F7F"
             android:textSize="18sp" />
 
         <ImageView
@@ -49,6 +51,7 @@
             android:layout_marginTop="300dp"
             android:fontFamily="@font/exo_medium"
             android:text="email"
+            android:textColor="#7F7F7F"
             android:textSize="18sp" />
 
         <TextView
@@ -59,6 +62,8 @@
             android:layout_marginTop="70dp"
             android:fontFamily="@font/exo_medium"
             android:text="Username"
+            android:textColor="#7F7F7F"
+            android:textColorHighlight="#000000"
             android:textSize="18sp" />
 
         <Button

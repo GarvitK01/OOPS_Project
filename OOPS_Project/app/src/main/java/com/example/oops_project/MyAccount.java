@@ -2,6 +2,7 @@ package com.example.oops_project;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -40,6 +41,7 @@ public class MyAccount extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 un.setText(value.getString("username"));
+                //Log.d("myAccount", value.getString("username"));
                 ph.setText(value.getString("phone"));
                 em.setText(value.getString("email"));
                 pr.setText(value.getString("profession"));

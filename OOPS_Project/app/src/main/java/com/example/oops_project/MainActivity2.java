@@ -108,7 +108,14 @@ public class MainActivity2 extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("Login", "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+                            userId = mAuth.getCurrentUser().getUid();
+                            DocumentReference documentReference = fStore.collection("users").document(userId);
+                            Map<String,Object> user = new HashMap<>();
+                            user.put("username",username);
+                            user.put("email",email);
+                            user.put("phone",contact);
+                            user.put("profession",profession);
+                            user.put("password",password);
                             startActivity(new Intent(getApplicationContext(), user_info.class));
                         } else {
                             // If sign in fails, display a message to the user.
@@ -186,7 +193,14 @@ public class MainActivity2 extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("Message", "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+                            userId = mAuth.getCurrentUser().getUid();
+                            DocumentReference documentReference = fStore.collection("users").document(userId);
+                            Map<String,Object> user = new HashMap<>();
+                            user.put("username",username);
+                            user.put("email",email);
+                            user.put("phone",contact);
+                            user.put("profession",profession);
+                            user.put("password",password);
                             startActivity(new Intent(getApplicationContext(), user_info.class));
                         } else {
                             // If sign in fails, display a message to the user.
